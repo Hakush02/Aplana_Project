@@ -5,6 +5,7 @@ public class HelloWorld {
             public static void main(String[] args) {
 
             System.out.println("Hello, world!");
-            String = "some new" ;
+            String additional = "some new string for 2d commit" ;
+
         }
     }
