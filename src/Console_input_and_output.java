@@ -1,7 +1,7 @@
 import java.util.Scanner ;
 
 
-public class Task_1 {
+public class Console_input_and_output {
 
     public static void main (String [] args)   {
 
