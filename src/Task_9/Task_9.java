@@ -8,19 +8,20 @@ import java.util.Scanner;
 public class Task_9 {
     public static void main (String [] args ){
 
-        int [] numbers = new int[4];
-        System.out.println("Введите значения для массива");
         Scanner sc = new Scanner(System.in);
-        numbers[0] = sc.nextInt();
-        numbers[1] = sc.nextInt();
-        numbers[2] = sc.nextInt();
-        numbers[3] = sc.nextInt();
-        for (int i : numbers) {
-        System.out.println(i*2);
+        System.out.println("Введите размер массива");
+        int size = sc.nextInt();
+        System.out.println("Введите значения для массива");
+        int [] numbers = new int[size];
+        for (int i=0; i<size; i++)  {
+            numbers [i]  = sc.nextInt();
+        }
+        for (int i=0; i<size; i++)
+        System.out.print(numbers[i]*2 + " ");
 
         }
 
     }
 
 
-}
+

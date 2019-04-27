@@ -8,30 +8,24 @@ import java.util.Scanner;
 public class Task_10 {
     public static void main (String [] args ){
 
-    int [][] numbers = new int [3][4];
-        System.out.println("Введите значения для матрицы");
+        System.out.println("Введите размеры матрицы");
         Scanner sc = new Scanner(System.in);
-        numbers[0][0] = sc.nextInt();
-        numbers[0][1] = sc.nextInt();
-        numbers[0][2] = sc.nextInt();
-        numbers[0][3] = sc.nextInt();
-        numbers[1][0] = sc.nextInt();
-        numbers[1][1] = sc.nextInt();
-        numbers[1][2] = sc.nextInt();
-        numbers[1][3] = sc.nextInt();
-        numbers[2][0] = sc.nextInt();
-        numbers[2][1] = sc.nextInt();
-        numbers[2][2] = sc.nextInt();
-        numbers[2][3] = sc.nextInt();
+        int strings = sc.nextInt();
+        int colomns = sc.nextInt();
+        int [][] numbers = new int [strings][colomns];
+        System.out.println("Введите значения для матрицы");
+        for ( int i=0; i<strings; i++ ) {
+            for ( int j=0; j<colomns; j++ ){
+                numbers[i][j] = sc.nextInt();
+            }
+        }
+
 
         for ( int i=0; i<1; i++ ) {
-            for ( int j=0; j<4; j++ ){
+            for ( int j=0; j<colomns; j++ ){
                 System.out.print(numbers [i][j] *3 + " ");
             }
             System.out.println();
-
         }
     }
-
-
 }
