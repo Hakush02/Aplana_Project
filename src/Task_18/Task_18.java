@@ -17,11 +17,18 @@ public class Task_18 {
         writer.write("Вот этот текст записан в созданный file18.txt\r\nВторая строчка");
         writer.close();
 
-        FileReader reader = new FileReader(f);
-        char[] txt = new char[200];
+        FileReader freader = new FileReader(f);
+        BufferedReader breader = new BufferedReader(freader);
+        String line = breader.readLine();
+        while (line != null) {
+            System.out.println(line);
+            line = breader.readLine();
+        }
+        breader.close();
+        /*char[] txt = new char[200];
         reader.read(txt);
         System.out.println(txt);
-        reader.close();
+        reader.close();*/
 
         System.out.println("Введите текстовые данные, которыми вы хотите перезаписать файл");
         Scanner sc = new Scanner(System.in);
