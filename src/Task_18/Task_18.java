@@ -10,19 +10,21 @@ import java.util.Scanner;
 public class Task_18 {
     public static void main (String [] args ) throws IOException {
 
-        File f = new File("C://Users//Hayk//Desktop//file18.txt"); //путь указать свой
+        /* File f = new File("C://Users//Hayk//Desktop//file18.txt"); //путь указать свой
         f.createNewFile();
 
         FileWriter writer = new FileWriter(f);
         writer.write("Вот этот текст записан в созданный file18.txt\r\nВторая строчка");
-        writer.close();
+        writer.close(); */
 
-        FileReader freader = new FileReader(f);
+        FileReader freader = new FileReader("C://Users//Hayk//Desktop//file18.txt"); //указать свой путь к файлу
         BufferedReader breader = new BufferedReader(freader);
         String line = breader.readLine();
+        int i = 0;
         while (line != null) {
             System.out.println(line);
             line = breader.readLine();
+            i++ ;
         }
         breader.close();
         /*char[] txt = new char[200];
@@ -32,10 +34,15 @@ public class Task_18 {
 
         System.out.println("Введите текстовые данные, которыми вы хотите перезаписать файл");
         Scanner sc = new Scanner(System.in);
-        String newText = sc.nextLine() + "\r\n"+ sc.nextLine();
+        /* String newText = sc.nextLine() + "\r\n" + sc.nextLine() */;
 
-        FileWriter writer2 = new FileWriter(f);
-        writer2.write(newText);
+        FileWriter writer2 = new FileWriter("C://Users//Hayk//Desktop//file18.txt");
+        while (i > 0)    {
+            String newText = sc.nextLine();
+            writer2.write(newText + "\r\n");
+            i--;
+        }
+
         writer2.close();
 
     }
